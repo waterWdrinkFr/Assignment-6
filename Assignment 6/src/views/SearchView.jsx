@@ -63,7 +63,7 @@ function SearchView() {
 			<div className="mt-[120px] min-h-screen">
 				<h2 className="text-2xl font-bold text-white ml-5 mb-4">Results for "{query}"</h2>
 				{!loading && results.length > 0 ? (
-					<div className="w-[98%] ml-5 grid grid-cols-5 gap-4">
+					<div className="w-[96%] ml-5 grid grid-cols-5 gap-4">
 						{results.map((movie) => (
 							<div key={movie.id} className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
 								<Link to={`/movies/details/${movie.id}`}>
@@ -98,7 +98,7 @@ function SearchView() {
 				<button
 					onClick={() => handlePageChange(-1)}
 					disabled={page === 1 || loading}
-					className="mt-4 ml-95.5 px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 cursor-pointer"
+					className="mt-4 ml-129.5 px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 cursor-pointer"
 				>
 					Previous
 				</button>
@@ -110,8 +110,7 @@ function SearchView() {
 				>
 					Next
 				</button>
-				{loading && <span className="ml-64 text-white">Loading...</span>}
-				<span className="ml-64 text-white">Page {page} of {totalPages.current}</span>
+				<span className="ml-99 text-white">Page {page} of {totalPages.current}</span>
 			</div>
 			<Footer />
 		</>
