@@ -87,7 +87,7 @@ function SearchView() {
 										: "bg-blue-700 hover:bg-blue-800 cursor-pointer"
 										}`}
 								>
-									{isInCart(movie.id) ? "Added to Cart" : "Buy - $$$"}
+									{isInCart(movie.id) ? "Added" : "Buy"}
 								</button>
 							</div>
 						))}
@@ -102,7 +102,6 @@ function SearchView() {
 				>
 					Previous
 				</button>
-
 				<button
 					onClick={() => handlePageChange(1)}
 					disabled={page === totalPages.current || loading}
