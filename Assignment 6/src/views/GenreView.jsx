@@ -77,7 +77,7 @@ function GenreView() {
                                 : "bg-blue-700 hover:bg-blue-800 cursor-pointer"
                                 }`}
                         >
-                            {isInCart(movie.id) ? "Added to Cart" : "Buy - $$$"}
+                            {isInCart(movie.id) ? "Added" : "Buy"}
                         </button>
                     </div>
                 ))}
