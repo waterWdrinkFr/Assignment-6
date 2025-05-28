@@ -97,7 +97,7 @@ function GenreView() {
             >
                 Next
             </button>
-            <span className="ml-48 text-white">Page {page} of {totalPages.current}</span>
+            <span className="ml-46 text-white">Page {page} of {totalPages.current}</span>
         </div>
     );
 }

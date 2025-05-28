@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStoreContext } from "../context";
 import axios from "axios";
+import { set } from "immutable";
 
 function RegisterView() {
-    const { name, setName, lastName, setLastName, email, setEmail, password, setPassword, selectedGenres, setSelectedGenres } = useStoreContext();
+    const { name, setName, lastName, setLastName, email, setEmail, password, setPassword, selectedGenres, setSelectedGenres, setLoggedIn } = useStoreContext();
 
     const [confirmPassword, setConfirmPassword] = useState("");
     const [genres, setGenres] = useState([]);
@@ -48,7 +49,8 @@ function RegisterView() {
             alert("Passwords do not match!");
             return;
         }
-        navigate("/login");
+        setLoggedIn(true);
+        navigate(`/movies/genres/${selectedGenres.keys().next().value}`);
     };
 
     return (

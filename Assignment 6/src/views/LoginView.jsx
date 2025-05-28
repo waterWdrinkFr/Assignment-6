@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStoreContext } from "../context";
+import { set } from "immutable";
 
 function LoginView() {
-    const { email, password, setLoggedIn, selectedGenres } = useStoreContext();
+    const { setLoggedIn, setName } = useStoreContext();
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
     const [error, setError] = useState("");
@@ -11,9 +12,10 @@ function LoginView() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (inputEmail === email && inputPassword === password) {
+        if (inputEmail === "j@s" && inputPassword === "js") {
             setLoggedIn(true);
-            navigate(`/movies/genres/${selectedGenres.keys().next().value}`);
+            setName("Justin");
+            navigate("/");
         } else {
             setError("Invalid email or password.");
         }

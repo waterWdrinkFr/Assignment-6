@@ -109,7 +109,7 @@ function SearchView() {
 				>
 					Next
 				</button>
-				<span className="ml-99 text-white">Page {page} of {totalPages.current}</span>
+				<span className="ml-98 text-white">Page {page} of {totalPages.current}</span>
 			</div>
 			<Footer />
 		</>
