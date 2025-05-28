@@ -5,13 +5,6 @@ import { useStoreContext } from "../context";
 function GenresList({ onGenreSelect }) {
     const { selectedGenres } = useStoreContext();
     const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     if (selectedGenres.size === 0) {
-    //         navigate("/login");
-    //     }
-    // }, [selectedGenres, navigate]);
-
     const handleGenreClick = (genreId) => {
         navigate(`/movies/genres/${genreId}`);
 
